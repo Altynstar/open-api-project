@@ -9,10 +9,21 @@
 <body>
     <div class="container">
         <h1>Open API Project</h1>
-        <p>Testing API connections...</p>
-        <div id="output"></div>
+        
+        <!-- Navigation Tabs -->
+        <nav class="data-nav">
+            <button class="nav-btn active" data-type="posts">📝 Blog Posts</button>
+            <button class="nav-btn" data-type="users">👥 Users</button>
+            <button class="nav-btn" data-type="comments">💬 Comments</button>
+        </nav>
+        
+        <div id="output">
+            <div class="welcome-message">
+                <h3>Welcome! Choose a data type above to get started.</h3>
+                <p>This project demonstrates fetching data from different API endpoints.</p>
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
 </html>
-

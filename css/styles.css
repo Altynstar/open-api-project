@@ -1,83 +1,199 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-h1 {
-    color: #2a9d8f;
-    text-align: center;
-}
-
 /* ========================
-   API ERROR STYLING
+   NAVIGATION STYLES
    ======================== */
-.api-error {
-    color: #dc3545;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    padding: 1rem;
+.data-nav {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 0.5rem;
+}
+
+.nav-btn {
+    background: #e9ecef;
+    color: #495057;
+    border: 2px solid transparent;
+    padding: 12px 24px;
     border-radius: 8px;
+    cursor: pointer;
     font-weight: 600;
-    text-align: center;
-    margin: 1rem 0;
-    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #dee2e6;
+    transform: translateY(-2px);
+}
+
+.nav-btn.active {
+    background: #2a9d8f;
+    color: white;
+    border-color: #21867a;
 }
 
 /* ========================
-   API POST STYLING
+   WELCOME MESSAGE
    ======================== */
-.api-post {
-    background: linear-gradient(135deg, #e9c46a 0%, #f4a261 100%);
-    color: #264653;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border-radius: 12px;
-    border-left: 4px solid #e76f51;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.welcome-message {
+    text-align: center;
+    padding: 3rem;
+    color: #6c757d;
 }
 
-.api-post h4 {
-    color: #264653;
-    margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.api-post p {
-    margin: 0.5rem 0;
-    line-height: 1.5;
-}
-
-.api-post strong {
-    color: #2a9d8f;
+.welcome-message h3 {
+    color: #495057;
+    margin-bottom: 1rem;
 }
 
 /* ========================
-   RESPONSIVE DESIGN FOR API ELEMENTS
+   USERS GRID STYLING
+   ======================== */
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.user-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid #e9ecef;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.user-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.user-id {
+    background: #e9c46a;
+    color: #264653;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.user-name {
+    color: #264653;
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.user-username {
+    color: #2a9d8f;
+    font-style: italic;
+    margin: 0;
+}
+
+.user-info {
+    color: #495057;
+    line-height: 1.6;
+}
+
+.user-info p {
+    margin: 0.5rem 0;
+}
+
+/* ========================
+   COMMENTS GRID STYLING
+   ======================== */
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.comment-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid #e9ecef;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.comment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.comment-header {
+    margin-bottom: 1rem;
+}
+
+.comment-id {
+    background: #f4a261;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.comment-name {
+    color: #264653;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.comment-email {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.comment-body {
+    color: #495057;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.comment-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* ========================
+   COLLAPSIBLE ITEMS
+   ======================== */
+.item-collapsed .user-info,
+.item-collapsed .comment-body,
+.item-collapsed .comment-meta,
+.item-collapsed .post-body {
+    display: none;
+}
+
+.item-collapsed {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* ========================
+   RESPONSIVE UPDATES
    ======================== */
 @media (max-width: 768px) {
-    .api-post {
-        padding: 1rem;
-        margin: 0.8rem 0;
+    .data-nav {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .api-post h4 {
-        font-size: 1.1rem;
+    .nav-btn {
+        width: 200px;
+        margin: 0.25rem 0;
     }
     
-    .api-error {
-        padding: 0.8rem;
-        margin: 0.8rem 0;
+    .users-grid,
+    .comments-grid {
+        grid-template-columns: 1fr;
     }
 }
