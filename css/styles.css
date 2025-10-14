@@ -1,1 +1,83 @@
-/* Additional CSS styles will go here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2a9d8f;
+    text-align: center;
+}
+
+/* ========================
+   API ERROR STYLING
+   ======================== */
+.api-error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+}
+
+/* ========================
+   API POST STYLING
+   ======================== */
+.api-post {
+    background: linear-gradient(135deg, #e9c46a 0%, #f4a261 100%);
+    color: #264653;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    border-left: 4px solid #e76f51;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.api-post h4 {
+    color: #264653;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.api-post p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.api-post strong {
+    color: #2a9d8f;
+}
+
+/* ========================
+   RESPONSIVE DESIGN FOR API ELEMENTS
+   ======================== */
+@media (max-width: 768px) {
+    .api-post {
+        padding: 1rem;
+        margin: 0.8rem 0;
+    }
+    
+    .api-post h4 {
+        font-size: 1.1rem;
+    }
+    
+    .api-error {
+        padding: 0.8rem;
+        margin: 0.8rem 0;
+    }
+}
