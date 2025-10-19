@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open API Project</title>
+    <title>API Explorer - Professional Data Viewer</title>
+    <meta name="description" content="A clean, professional API data explorer">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Open API Project</h1>
+        <header>
+            <h1>API Explorer</h1>
+            <p>Clean, professional data visualization</p>
+        </header>
         
-        <!-- SIMPLIFIED Navigation - Comments removed -->
-        <nav class="data-nav">
-            <button class="nav-btn active" data-type="posts">📝 Blog Posts</button>
-            <button class="nav-btn" data-type="users">👥 Users</button>
-            <!-- COMMENTS BUTTON REMOVED -->
-        </nav>
-        
-        <div id="output">
-            <div class="welcome-message">
-                <h3>Welcome! Choose a data type above to get started.</h3>
-                <p>This project demonstrates fetching data from different API endpoints.</p>
+        <section class="controls">
+            <div class="buttons">
+                <button id="posts-btn" class="active">📝 Blog Posts</button>
+                <button id="users-btn">👥 Users</button>
             </div>
-        </div>
+        </section>
+        
+        <main class="content">
+            <div id="data-container">
+                <div class="welcome">
+                    <h2>Welcome to API Explorer</h2>
+                    <p>Select a data type above to begin exploring</p>
+                </div>
+            </div>
+        </main>
     </div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
