@@ -27,4 +27,3 @@ A clean, professional web application that fetches and displays data from JSONPl
 ---
 
 *My Open API project for learning JavaScript with CTD*
-
