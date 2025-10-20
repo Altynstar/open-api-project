@@ -9,17 +9,9 @@ A clean, professional web application that fetches and displays data from JSONPl
 
 ## How to Run Locally
 
-### Method 1: Using a Local Server (Recommended)
-1. **Download all files** from this repository, maintaining the folder structure
-2. **Open terminal/command prompt** in the project folder
-3. **Run a local server** using one of these options:
-   - **Node.js**: `npx http-server`
-   - **VS Code**: Install the "Live Server" extension and right-click `index.html` → "Open with Live Server"
-4. **Open your browser** to the provided localhost URL
-
-### Method 2: Direct File Opening
-1. **Download all files** from this repository, maintaining the folder structure
-2. **Open `index.html`** directly in your web browser
+1. **Download all files** from this repository
+2. **Open `index.html`** in your web browser
+3. **Click the buttons** to load and display API data
 
 ## Technologies Used
 - HTML5 with semantic markup
